@@ -1,2 +1,0 @@
-: $" POSTPONE C" ; IMMEDIATE
-: .S DEPTH .SN ;

@@ -1,3 +1,0 @@
-[submodule "c2nasm/nasm"]
-	path = c2nasm/nasm
-	url = https://github.com/gitGNU/nasm
