@@ -1,7 +1,0 @@
-LIBRARY network.obj
-
-EXPORTS
-inet_addr
-inet_ntoa
-getaddrinfo
-freeaddrinfo

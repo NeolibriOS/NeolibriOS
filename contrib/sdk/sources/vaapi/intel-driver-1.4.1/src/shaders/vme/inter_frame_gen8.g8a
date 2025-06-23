@@ -1,2 +1,0 @@
-#include "vme8.inc"
-#include "inter_frame_gen8.asm"

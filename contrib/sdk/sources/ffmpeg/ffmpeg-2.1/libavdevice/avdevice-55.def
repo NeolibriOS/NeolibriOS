@@ -1,6 +1,0 @@
-EXPORTS
-    DllStartup
-    avdevice_configuration
-    avdevice_license
-    avdevice_register_all
-    avdevice_version

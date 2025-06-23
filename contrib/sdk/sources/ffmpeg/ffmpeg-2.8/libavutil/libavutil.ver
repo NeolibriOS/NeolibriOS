@@ -1,5 +1,0 @@
-LIBAVUTIL_54 {
-        global: DllStartup;
-                av*;
-        local: *;
-};

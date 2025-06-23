@@ -1,5 +1,0 @@
-LIBSWRESAMPLE_1 {
-        global: DllStartup;
-                swr_*; swresample_*;
-        local: *;
-};

@@ -1,1 +1,0 @@
-fasm mtldr_install.asm

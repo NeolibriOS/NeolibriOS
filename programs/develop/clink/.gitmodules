@@ -1,9 +1,0 @@
-[submodule "epep"]
-	path = epep
-	url = https://github.com/mkostoevr/epep
-[submodule "cvec"]
-	path = cvec
-	url = https://github.com/mkostoevr/cvec
-[submodule "cdict"]
-	path = cdict
-	url = https://github.com/mkostoevr/cdict

@@ -1,4 +1,0 @@
-VERSION 6.5
-EXPORTS
-  DllStartup
-  gbm_backend DATA
