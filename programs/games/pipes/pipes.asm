@@ -16,7 +16,7 @@ fg3color equ  0x007F7F55
 btcolor  equ  0x005B6200
 
 include '..\..\macros.inc'
-include 'lang.inc' ; Language support for locales: et_EE, en_US.
+;include 'lang.inc' ; Language support for locales: et_EE, en_US.
 
 use32
 
