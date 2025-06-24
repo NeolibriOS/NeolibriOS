@@ -1,0 +1,7 @@
+in the root of this repo run:
+
+meson setup build_en -Dlang=en_US
+meson compile -C build_en
+
+meson setup build_ru -Dlang=ru_RU
+meson compile -C build_ru
