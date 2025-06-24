@@ -5,3 +5,7 @@ meson compile -C build_en
 
 meson setup build_ru -Dlang=ru_RU
 meson compile -C build_ru
+
+NOTE: on windows fails when trying to pass '-dlang=LANG' to fasm beacuse on windows meson warp each arg in ""
+in windows use WSL
+
