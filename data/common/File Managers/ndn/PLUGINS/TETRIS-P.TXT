@@ -1,3 +1,0 @@
-.Description=Gra Tetris
-.Author=NDN Team
-.Version=1.0
