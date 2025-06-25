@@ -13,6 +13,7 @@ programs_dir = meson.current_source_dir() / 'programs'
 #   subdir(relpath.dirname())
 # endforeach
 
+subdir('kernel')
 
 subdir('programs/games/pipes')
 

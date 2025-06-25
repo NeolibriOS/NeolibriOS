@@ -42,7 +42,7 @@ VESA_1_2_VIDEO  = 0      ; enable vesa 1.2 bank switch functions
 
 include "proc32.inc"
 include "kglobals.inc"
-include "lang.inc"
+; include "lang.inc"
 include "encoding.inc"
 
 include "const.inc"
