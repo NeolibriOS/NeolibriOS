@@ -2,7 +2,11 @@ project('NeolibriOS', 'c', default_options: ['warning_level=everything'])
 
 lang = get_option('lang')
 
+fasm = find_program('fasm', required: true)
+kpack = find_program('kpack', required: true)
+kerpack = find_program('kerpack', required: true)
 
+subdir('kernel/bootloader')
 subdir('kernel')
 
 games = [
