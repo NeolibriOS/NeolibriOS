@@ -820,18 +820,10 @@ block_table:
 
 if lang eq ru_RU
 
-  title          db 'пїЅпїЅпїЅпїЅпїЅ 1.62',0
-  labe           db 'пїЅпїЅпїЅпїЅпїЅ',0
-  text           db 'пїЅзЄЁ:',0
-  game_finished: db '  пїЅпїЅпїЅпїЅпїЅ',0
-
-else if lang eq et_EE
-
-  title          db 'Tetris 1.62',0
-  labe           db 'PAUS',0
-  text           db 'Tulemus:',0
-  game_finished: db 'UUS MпїЅNG',0
-
+  title          db '’ҐваЁб 1.62',0
+  labe           db 'ЏЂ“‡Ђ',0
+  text           db 'ЋзЄЁ:',0
+  game_finished: db '  ЌЋ‚Ђџ',0
 else
 
   title          db 'Tetris 1.62',0
