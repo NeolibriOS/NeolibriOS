@@ -15,7 +15,7 @@
 ;
 ; Version 1.0
 
-include "lang.inc"
+;include "lang.inc"
 
 lf              =     0ah
 cr              =     0dh
