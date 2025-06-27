@@ -4,6 +4,7 @@ lang = get_option('lang')
 
 fasm = find_program('fasm', required: true)
 kpack = find_program('kpack', required: true)
+kpack = [kpack, '--nologo']
 kerpack = find_program('kerpack', required: true)
 
 subdir('kernel/bootloader')
