@@ -7,38 +7,32 @@ def run_cmd_pretty(cmd):
     print("Return code:", result_code, end='\n\n')
 
 
-# to test, in the root of the project run
-# python3 make_image.py --srcdir . --builddir build_en --targetimg neolibrios.img
-
 def main():
     parser = argparse.ArgumentParser(description='Process args')
 
-    parser.add_argument('--srcdir', required=True, help='Path to sources dir')
-    parser.add_argument('--builddir', required=True, help='Path to build dir')
-    parser.add_argument('--targetimg', required=True, help='Target image path')
-    parser.add_argument('--lang', required=True, help='Language of target image')
-
-
+    parser.add_argument('--builddir', required=True, help='Path to build directory from where image will be built')
     args = parser.parse_args()
 
-    # print(f"Sources directory: {args.srcdir}")
-    # print(f"Build directory: {args.builddir}")
-    # print(f"Target image: {args.targetimg}")
+    image_name = "neolibrios.img"
+    # memorize the source codes dir - its' the directory we started from
+    sources_dir = os.getcwd()
+
+    # now we are in build directory
+    os.chdir(args.builddir)
 
     # create empty 1.44M file
-    run_cmd_pretty(f"dd status=none if=/dev/zero of={args.targetimg} count=2880 bs=512")
+    run_cmd_pretty(f"dd status=none if=/dev/zero of={image_name} count=2880 bs=512")
 
     # format it as a standard 1.44M floppy
-    run_cmd_pretty(f"mformat -f 1440 -i {args.targetimg} ::")
+    run_cmd_pretty(f"mformat -f 1440 -i {image_name} ::")
 
     # copy fat12 bootloader
-    run_cmd_pretty(f"dd status=none if={os.path.join(args.builddir, "kernel/bootloader/boot_fat12.bin")} of={args.targetimg} count=1 bs=512 conv=notrunc")
-
+    run_cmd_pretty(f"dd status=none if={"kernel/bootloader/boot_fat12.bin"} of={image_name} count=1 bs=512 conv=notrunc")
 
 
 
     # try copy kernel
-    run_cmd_pretty(f'mcopy -moi {args.targetimg} "{os.path.join(args.builddir, "kernel/kernel.mnt")}" "::{"KERNEL.MNT"}"')
+    run_cmd_pretty(f'mcopy -moi {image_name} "{"kernel/kernel.mnt"}" "::{"KERNEL.MNT"}"')
 
 
     # TODO
