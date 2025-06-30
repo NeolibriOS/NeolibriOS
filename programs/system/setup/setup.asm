@@ -15,9 +15,9 @@ dd I_END
 dd param
 dd 0
 
-include '../../../proc32.inc'
-include '../../../macros.inc'
-include '../../../dll.inc'
+include '../../proc32.inc'
+include '../../macros.inc'
+include '../../dll.inc'
 ;---------------------------------------------------------------
 BootSettings:
 ; Set system language
