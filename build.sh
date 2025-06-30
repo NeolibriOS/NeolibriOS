@@ -9,4 +9,4 @@ LANG=$1
 
 bash ./build_noimg.sh ${LANG}
 
-python3 make_image.py --builddir "build_${LANG}"
+python3 make_image.py --builddir "build_${LANG}" --lang ${LANG}
