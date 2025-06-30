@@ -63,7 +63,10 @@ def main():
     img_files |= {
         "KERNEL.MNT": "kernel/kernel.mnt",
         "LAUNCHER": "programs/system/launcher/launcher",
+        "LOADDRV": "programs/system/loaddrv/loaddrv",
         "SETUP": "programs/system/setup/setup",
+
+        "DRIVERS/PS2MOUSE.SYS": "drivers/mouse/ps2mouse4d/ps2mouse.sys"
         #
     }
 
