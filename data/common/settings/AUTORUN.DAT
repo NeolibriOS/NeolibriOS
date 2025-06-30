@@ -5,11 +5,12 @@
 #
 #/SYS/CROPFLAT          "XS800 YS480"	1	# set limits of screen
 #/SYS/LOADDRV           COMMOUSE	1	# serial mouse driver
-#/SYS/DEVELOP/BOARD     ""   0	# Load DEBUG board
-# /SYS/SETUP              BOOT 0	# Load device settings
+/SYS/BOARD       ""   0	# Load DEBUG board
+/SYS/SETUP              BOOT 0	# Load device settings
 # /SYS/LOADDRV            RDC  0	# videodriver for RDC M2010/M2012
 # /SYS/@TASKBAR           ""   0	# Start taskbar
-# /SYS/ESKIN              ""   0	# Set style
+/SYS/ESKIN              ""   0	# Set style
+/SYS/GAMES/PIPES        ""   0  # Run something
 # /SYS/@ICON              ""   0	# Multithread desktop icons
 # /SYS/TMPDISK            A0   0	# Add virtual RAM disk /tmp0/1
 # /SYS/@RESHARE           ""   0	# Shared resources

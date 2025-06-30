@@ -14,9 +14,9 @@ org 0
         dd      filename
         dd      0
 ;------------------------------------------------------------------------------
-include 'lang.inc'
-include '../../../macros.inc'
-include '../../../debug.inc'
+;include 'lang.inc'
+include '../../macros.inc'
+include '../../debug.inc'
 purge   newline
 ;SMALL FONT
 MAXSTRINGS = 45

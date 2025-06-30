@@ -23,6 +23,14 @@ endforeach
 subdir('programs/system/launcher')
 subdir('programs/system/setup')
 subdir('programs/system/loaddrv')
+subdir('programs/system/eskin')
+subdir('programs/system/board')
+
+subdir('programs/develop/libraries/libs-dev/libini')
+subdir('programs/develop/libraries/libs-dev/libio')
 
 subdir('drivers/mouse/ps2mouse4d')
+
+subdir('skins/gnome_green')
+subdir('skins/shkvorka')
 
