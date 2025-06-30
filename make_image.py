@@ -62,11 +62,20 @@ def main():
 
     img_files |= {
         "KERNEL.MNT": "kernel/kernel.mnt",
+        "DEFAULT2.SKN": "skins/shkvorka/shkvorka.skn",
+        "DEFAULT.SKN": "skins/gnome_green/gnome_green.skn",
+        "ESKIN": "programs/system/eskin/eskin",
         "LAUNCHER": "programs/system/launcher/launcher",
         "LOADDRV": "programs/system/loaddrv/loaddrv",
         "SETUP": "programs/system/setup/setup",
+        "BOARD": "programs/system/board/board",
 
-        "DRIVERS/PS2MOUSE.SYS": "drivers/mouse/ps2mouse4d/ps2mouse.sys"
+        "DRIVERS/PS2MOUSE.SYS": "drivers/mouse/ps2mouse4d/ps2mouse.sys",
+
+        "LIB/LIBIO.OBJ": "programs/develop/libraries/libs-dev/libio/libio.obj",
+        "LIB/LIBINI.OBJ": "programs/develop/libraries/libs-dev/libini/libini.obj",
+
+        "GAMES/PIPES": "programs/games/pipes/pipes"
         #
     }
 
