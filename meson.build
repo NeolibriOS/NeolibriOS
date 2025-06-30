@@ -9,28 +9,34 @@ kerpack = find_program('kerpack', required: true)
 python3 = find_program('python3', required: true)
 pestrip = find_program('data/common/pestrip.asm', required: true)
 
-subdir('kernel/bootloader')
-subdir('kernel')
+# Get all directories containing meson.build files and include them as subdir():
 
-games = [
-  'pipes',
-  'tetris',
-]
-foreach game : games
-  subdir('programs/games/' + game)
-endforeach
+fs = import('fs')
 
-subdir('programs/system/launcher')
-subdir('programs/system/setup')
-subdir('programs/system/loaddrv')
-subdir('programs/system/eskin')
-subdir('programs/system/board')
+find_meson_builds = '''
+import os
+import sys
 
-subdir('programs/develop/libraries/libs-dev/libini')
-subdir('programs/develop/libraries/libs-dev/libio')
+root = sys.argv[1]
+build_files = []
+for dirpath, _, filenames in os.walk(root):
+    if 'meson.build' in filenames:
+        relpath = os.path.relpath(dirpath, root)
+        if relpath != '.':  # Exclude root directory
+            build_files.append(relpath)
+print('\n'.join(sorted(build_files)))
+'''
 
-subdir('drivers/mouse/ps2mouse4d')
+result = run_command('python3', '-c', find_meson_builds, meson.project_source_root(), check: false)
+if result.returncode() != 0
+    error('Failed to find meson.build files: ' + result.stderr())
+endif
 
-subdir('skins/gnome_green')
-subdir('skins/shkvorka')
-
+subdirs = result.stdout().strip()
+if subdirs != ''
+    subdirs = subdirs.split('\n')
+    foreach dir : subdirs
+        message('Including subdirectory: ' + dir)
+        subdir(dir)
+    endforeach
+endif
