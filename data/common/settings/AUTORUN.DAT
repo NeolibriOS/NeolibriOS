@@ -8,7 +8,7 @@
 /SYS/BOARD       ""   0	# Load DEBUG board
 /SYS/SETUP              BOOT 0	# Load device settings
 # /SYS/LOADDRV            RDC  0	# videodriver for RDC M2010/M2012
-# /SYS/@TASKBAR           ""   0	# Start taskbar
+/SYS/@TASKBAR           ""   0	# Start taskbar
 /SYS/ESKIN              ""   0	# Set style
 /SYS/GAMES/PIPES        ""   0  # Run something
 # /SYS/@ICON              ""   0	# Multithread desktop icons

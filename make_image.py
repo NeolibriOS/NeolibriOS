@@ -50,7 +50,7 @@ def main():
         "SETTINGS/AUTORUN.DAT": os.path.join(sources_dir, "data/common/settings/AUTORUN.DAT"),
         "SETTINGS/CEDIT.INI": os.path.join(sources_dir, "programs/develop/cedit/CEDIT.INI"),
         "SETTINGS/ICON.INI": os.path.join(sources_dir, f"data/{args.lang}/settings/icon.ini"),
-        "SETTINGS/KEYMAP.KEY": os.path.join(sources_dir, "programs/system/taskbar/trunk/KEYMAP.KEY"),
+        "SETTINGS/KEYMAP.KEY": os.path.join(sources_dir, "programs/system/taskbar/KEYMAP.KEY"),
         "SETTINGS/KOLIBRI.LBL": os.path.join(sources_dir, f"data/{args.lang}/settings/kolibri.lbl"),
         "SETTINGS/LANG.INI": os.path.join(sources_dir, f"data/{args.lang}/settings/lang.ini"),
         "SETTINGS/MENU.DAT": os.path.join(sources_dir, f"data/{args.lang}/settings/menu.dat"),
@@ -62,6 +62,7 @@ def main():
 
     img_files |= {
         "KERNEL.MNT": "kernel/kernel.mnt",
+        "@TASKBAR": "programs/system/taskbar/taskbar",
         "DEFAULT2.SKN": "skins/shkvorka/shkvorka.skn",
         "DEFAULT.SKN": "skins/gnome_green/gnome_green.skn",
         "ESKIN": "programs/system/eskin/eskin",
