@@ -7,6 +7,7 @@ kpack = find_program('kpack', required: true)
 kpack = [kpack, '--nologo']
 kerpack = find_program('kerpack', required: true)
 python3 = find_program('python3', required: true)
+pestrip = find_program('data/common/pestrip.asm', required: true)
 
 subdir('kernel/bootloader')
 subdir('kernel')
@@ -21,4 +22,7 @@ endforeach
 
 subdir('programs/system/launcher')
 subdir('programs/system/setup')
+subdir('programs/system/loaddrv')
+
+subdir('drivers/mouse/ps2mouse4d')
 

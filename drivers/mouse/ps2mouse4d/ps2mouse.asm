@@ -12,10 +12,10 @@ PS2_DRV_VER equ 1
 section '.flat' code readable writable executable
 data fixups
 end data
-include '../../../struct.inc'
-include '../../../macros.inc'
-include '../../../proc32.inc'
-include '../../../peimport.inc'
+include '../../struct.inc'
+include '../../macros.inc'
+include '../../proc32.inc'
+include '../../peimport.inc'
 
 
 entry START
