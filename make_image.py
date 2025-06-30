@@ -62,6 +62,7 @@ def main():
 
     img_files |= {
         "KERNEL.MNT": "kernel/kernel.mnt",
+        "LAUNCHER": "programs/system/launcher/launcher",
         "SETUP": "programs/system/setup/setup",
         #
     }

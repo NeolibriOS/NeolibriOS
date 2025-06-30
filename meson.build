@@ -19,5 +19,6 @@ foreach game : games
   subdir('programs/games/' + game)
 endforeach
 
+subdir('programs/system/launcher')
 subdir('programs/system/setup')
 
