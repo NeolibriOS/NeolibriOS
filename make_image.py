@@ -75,6 +75,7 @@ def main():
 
         "LIB/LIBIO.OBJ": "programs/develop/libraries/libs-dev/libio/libio.obj",
         "LIB/LIBINI.OBJ": "programs/develop/libraries/libs-dev/libini/libini.obj",
+        "LIB/LIBIMG.OBJ": "programs/develop/libraries/libs-dev/libimg/libimg.obj",
 
         "GAMES/PIPES": "programs/games/pipes/pipes"
         #
