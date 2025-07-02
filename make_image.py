@@ -1,10 +1,13 @@
 import os
+import sys
 import argparse
 
 def run_cmd_pretty(cmd):
     print("Running:", cmd)
     result_code = os.system(cmd)
     print("Return code:", result_code, end='\n\n')
+    if result_code != 0:
+        sys.exit('COMMAND FAILED')
 
 
 def get_dirs_from_paths(path_list):
@@ -76,6 +79,7 @@ def main():
         "LIB/LIBIO.OBJ": "programs/develop/libraries/libs-dev/libio/libio.obj",
         "LIB/LIBINI.OBJ": "programs/develop/libraries/libs-dev/libini/libini.obj",
         "LIB/LIBIMG.OBJ": "programs/develop/libraries/libs-dev/libimg/libimg.obj",
+        "LIB/BOX_LIB.OBJ": "programs/develop/libraries/box_lib/trunk/box_lib.obj",
 
         "GAMES/PIPES": "programs/games/pipes/pipes"
         #
