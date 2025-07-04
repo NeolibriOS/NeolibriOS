@@ -24,13 +24,14 @@ def get_dirs_from_paths(path_list):
 
 def main():
     parser = argparse.ArgumentParser(description='Process args')
+    parser.add_argument('--srcdir', required=True, help='Path to sources root directory')
     parser.add_argument('--builddir', required=True, help='Path to build directory from where image will be built')
     parser.add_argument('--lang', required=True, help='Language of build, e.g.: en_US')
     args = parser.parse_args()
 
     image_name = "neolibrios.img"
     # memorize the source codes dir - its' the directory we started from
-    sources_dir = os.getcwd()
+    sources_dir = args.srcdir
 
     # now we are in build directory
     os.chdir(args.builddir)
@@ -104,12 +105,9 @@ def main():
     run_cmd_pretty(cmd_create_dirs)
 
     # copy files to the image
-    cmd_copy_files = ""
     for idx, (imgpath, localpath) in enumerate(img_files.items()):
-        if idx != 0:
-            cmd_copy_files += " && "
-        cmd_copy_files += f'mcopy -moi {image_name} "{localpath}" "::{imgpath}"'
-    run_cmd_pretty(cmd_copy_files)
+        cmd_copy_file = f'mcopy -moi {image_name} "{localpath}" "::{imgpath}"'
+        run_cmd_pretty(cmd_copy_file)
 
 
 if __name__ == '__main__':

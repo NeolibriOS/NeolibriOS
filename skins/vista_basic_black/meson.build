@@ -1,4 +1,4 @@
-custom_target('skins_vista_basic_black',
+current_target = custom_target('skins_vista_basic_black',
   input: ['default.asm', 'default.dtp.asm'],
   output: 'vista_basic_black.skn',
   command: [

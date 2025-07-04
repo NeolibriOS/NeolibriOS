@@ -1,4 +1,4 @@
-custom_target('sys_loaddrv',
+current_target = custom_target('sys_loaddrv',
   input: ['loaddrv.asm'],
   output: 'loaddrv',
   command: [

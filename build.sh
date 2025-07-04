@@ -6,7 +6,5 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 LANG=$1
-
-bash ./build_noimg.sh ${LANG}
-
-python3 make_image.py --builddir "build_${LANG}" --lang ${LANG}
+meson setup "build_${LANG}" -Dlang="${LANG}"
+meson compile -C "build_${LANG}"

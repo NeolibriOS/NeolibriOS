@@ -1,4 +1,4 @@
-custom_target('box_lib',
+current_target = custom_target('box_lib',
   input: ['box_lib.asm'],
   output: 'box_lib.obj',
   command: [

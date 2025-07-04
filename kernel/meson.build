@@ -1,6 +1,6 @@
 lang = get_option('lang')
 
-custom_target('kernel',
+current_target = custom_target('kernel',
   input: ['kernel.asm'],
   output: ['kernel.mnt', 'kernel.mnt.fas'],
   command: [

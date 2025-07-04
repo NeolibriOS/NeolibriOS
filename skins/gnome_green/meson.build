@@ -1,4 +1,4 @@
-custom_target('skins_gnome_green',
+current_target = custom_target('skins_gnome_green',
   input: ['default.asm', 'default.dtp.asm'],
   output: 'gnome_green.skn',
   command: [

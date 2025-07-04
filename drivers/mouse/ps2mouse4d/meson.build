@@ -1,4 +1,4 @@
-custom_target('drivers_ps2mouse',
+current_target = custom_target('drivers_ps2mouse',
   input: ['ps2mouse.asm'],
   output: 'ps2mouse.sys',
   command: [

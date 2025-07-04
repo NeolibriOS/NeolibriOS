@@ -1,6 +1,6 @@
 lang = get_option('lang')
 
-custom_target('game_tetris',
+current_target = custom_target('game_tetris',
   input: ['tetris.asm'],
   output: 'tetris',
   command: [

@@ -1,6 +1,6 @@
 lang = get_option('lang')
 
-custom_target('game_pipes',
+current_target = custom_target('game_pipes',
   input: ['pipes.asm', 'pipes.png', 'pipes.raw'],
   output: 'pipes',
   command: [

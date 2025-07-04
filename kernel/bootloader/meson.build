@@ -1,6 +1,6 @@
 lang = get_option('lang')
 
-custom_target('boot_fat12',
+current_target = custom_target('boot_fat12',
   input: ['boot_fat12.asm'],
   output: 'boot_fat12.bin',
   command: [

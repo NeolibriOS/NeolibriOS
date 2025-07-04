@@ -1,4 +1,4 @@
-custom_target('sys_setup',
+current_target = custom_target('sys_setup',
   input: ['setup.asm'],
   output: 'setup',
   command: [

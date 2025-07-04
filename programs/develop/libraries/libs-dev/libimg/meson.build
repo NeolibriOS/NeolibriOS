@@ -1,4 +1,4 @@
-custom_target('libimg',
+current_target = custom_target('libimg',
   input: ['libimg.asm'],
   output: 'libimg.obj',
   command: [

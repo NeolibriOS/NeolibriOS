@@ -1,4 +1,4 @@
-custom_target('libini',
+current_target = custom_target('libini',
   input: ['libini.asm'],
   output: 'libini.obj',
   command: [
@@ -7,3 +7,4 @@ custom_target('libini',
   ],
   build_by_default: true
 )
+target_libini = current_target

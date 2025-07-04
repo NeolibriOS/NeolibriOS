@@ -1,8 +1,4 @@
-Build all and make image:
 Example: ./build.sh en_US
-
-Build all without making an image:
-Example: ./build_noimg.sh ru_RU
 
 NOTE: meson.build's work only on Linux
 I tried on windows but they fail when trying to pass '-dlang=LANG' to fasm beacuse on windows meson wraps each arg in ""

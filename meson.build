@@ -32,11 +32,33 @@ if result.returncode() != 0
     error('Failed to find meson.build files: ' + result.stderr())
 endif
 
+all_targets = []
+
 subdirs = result.stdout().strip()
 if subdirs != ''
     subdirs = subdirs.split('\n')
     foreach dir : subdirs
         message('Including subdirectory: ' + dir)
         subdir(dir)
+        if is_variable('current_target')
+            all_targets += current_target
+        endif
     endforeach
 endif
+
+build_img = custom_target('build_img',
+    output: 'neolibrios.img',
+    input: [],
+    command: [
+        python3,
+        files('make_image.py'),
+        '--srcdir', meson.source_root(),
+        '--builddir', meson.current_build_dir(),
+        '--lang', lang,
+    ],
+    depends: all_targets,
+    build_by_default: true,
+    install: false,
+    build_always_stale: true
+)
+

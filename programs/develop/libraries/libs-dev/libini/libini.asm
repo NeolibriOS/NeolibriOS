@@ -1072,4 +1072,4 @@ export						  \
 	ini.set_int	  , 'ini_set_int'	, \
 	ini.set_color	  , 'ini_set_color'	, \
 	ini.get_shortcut  , 'ini_get_shortcut'	, \
-	ini.del_section   , 'ini_del_section'	
+	ini.del_section   , 'ini_del_section'

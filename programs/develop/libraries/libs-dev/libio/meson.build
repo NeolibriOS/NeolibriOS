@@ -1,4 +1,4 @@
-custom_target('libio',
+current_target = custom_target('libio',
   input: ['libio.asm'],
   output: 'libio.obj',
   command: [

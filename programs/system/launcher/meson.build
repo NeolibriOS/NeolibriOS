@@ -1,4 +1,4 @@
-custom_target('sys_launcher',
+current_target = custom_target('sys_launcher',
   input: ['launcher.asm'],
   output: 'launcher',
   command: [

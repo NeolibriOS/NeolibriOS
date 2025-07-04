@@ -1,4 +1,4 @@
-custom_target('skins_shkvorka',
+current_target = custom_target('skins_shkvorka',
   input: ['default.asm', 'colors.dtp.asm'],
   output: 'shkvorka.skn',
   command: [

@@ -1,6 +1,6 @@
 lang = get_option('lang')
 
-custom_target('sys_taskbar',
+current_target = custom_target('sys_taskbar',
   input: ['TASKBAR.ASM'],
   output: 'taskbar',
   command: [
