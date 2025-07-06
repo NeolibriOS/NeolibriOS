@@ -77,10 +77,17 @@ def main():
 
         "DRIVERS/PS2MOUSE.SYS": "drivers/mouse/ps2mouse4d/ps2mouse.sys",
 
-        "LIB/LIBIO.OBJ": "programs/develop/libraries/libs-dev/libio/libio.obj",
-        "LIB/LIBINI.OBJ": "programs/develop/libraries/libs-dev/libini/libini.obj",
-        "LIB/LIBIMG.OBJ": "programs/develop/libraries/libs-dev/libimg/libimg.obj",
         "LIB/BOX_LIB.OBJ": "programs/develop/libraries/box_lib/trunk/box_lib.obj",
+
+        "LIB/LIBGFX.OBJ": "programs/develop/libraries/libs-dev/libgfx/libgfx.obj",
+        "LIB/LIBIMG.OBJ": "programs/develop/libraries/libs-dev/libimg/libimg.obj",
+        "LIB/LIBINI.OBJ": "programs/develop/libraries/libs-dev/libini/libini.obj",
+        "LIB/LIBIO.OBJ": "programs/develop/libraries/libs-dev/libio/libio.obj",
+
+        "LIB/PROC_LIB.OBJ": "programs/develop/libraries/proc_lib/proc_lib.obj",
+
+        "LIB/SORT.OBJ": "programs/develop/libraries/sorter/sort.obj",
+
 
         "GAMES/PIPES": "programs/games/pipes/pipes"
         #
