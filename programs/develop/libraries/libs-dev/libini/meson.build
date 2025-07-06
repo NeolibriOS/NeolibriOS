@@ -7,4 +7,3 @@ current_target = custom_target('libini',
   ],
   build_by_default: true
 )
-target_libini = current_target
