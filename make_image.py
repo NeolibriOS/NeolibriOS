@@ -39,7 +39,7 @@ def main():
     img_files = {
         "MACROS.INC": os.path.join(sources_dir, "programs/macros.inc"),
         "STRUCT.INC": os.path.join(sources_dir, "programs/struct.inc"),
-        "HOME.PNG": os.path.join(sources_dir, "data/common/wallpapers/T_Home.png"),
+        "HOME.PNG": os.path.join(sources_dir, "data/common/wallpapers/T_Home_3.png"),
         "ICONS32.PNG": os.path.join(sources_dir, "data/common/icons32.png"),
         "ICONS16.PNG": os.path.join(sources_dir, "data/common/icons16.png"),
         "LANG.INC": os.path.join(sources_dir, f"data/{args.lang}/lang.inc"),
