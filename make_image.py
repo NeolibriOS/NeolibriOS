@@ -52,7 +52,7 @@ def main():
         "NETWORK/USERS.INI": os.path.join(sources_dir, "data/common/network/users.ini"),
         "SETTINGS/ASSOC.INI": os.path.join(sources_dir, "data/common/settings/assoc.ini"),
         "SETTINGS/AUTORUN.DAT": os.path.join(sources_dir, "data/common/settings/AUTORUN.DAT"),
-        "SETTINGS/CEDIT.INI": os.path.join(sources_dir, "programs/develop/cedit/CEDIT.INI"),
+        # "SETTINGS/CEDIT.INI": os.path.join(sources_dir, "programs/develop/cedit/CEDIT.INI"),
         "SETTINGS/ICON.INI": os.path.join(sources_dir, f"data/{args.lang}/settings/icon.ini"),
         "SETTINGS/KEYMAP.KEY": os.path.join(sources_dir, "programs/system/taskbar/KEYMAP.KEY"),
         "SETTINGS/KOLIBRI.LBL": os.path.join(sources_dir, f"data/{args.lang}/settings/kolibri.lbl"),
@@ -75,19 +75,21 @@ def main():
         "SETUP": "programs/system/setup/setup",
         "BOARD": "programs/system/board/board",
 
+        "FS/KFAR": "programs/fs/kfar/trunk/kfar",
+        "FS/KFAR.INI": os.path.join(sources_dir, f"data/{args.lang if args.lang != "en_US" else "common"}/File Managers/kfar.ini"),
+
         "DRIVERS/PS2MOUSE.SYS": "drivers/mouse/ps2mouse4d/ps2mouse.sys",
 
+        "LIB/ARCHIVER.OBJ": "programs/fs/kfar/trunk/kfar_arc/kfar_arc.obj",
         "LIB/BOX_LIB.OBJ": "programs/develop/libraries/box_lib/trunk/box_lib.obj",
-
         "LIB/LIBGFX.OBJ": "programs/develop/libraries/libs-dev/libgfx/libgfx.obj",
         "LIB/LIBIMG.OBJ": "programs/develop/libraries/libs-dev/libimg/libimg.obj",
         "LIB/LIBINI.OBJ": "programs/develop/libraries/libs-dev/libini/libini.obj",
         "LIB/LIBIO.OBJ": "programs/develop/libraries/libs-dev/libio/libio.obj",
-
         "LIB/PROC_LIB.OBJ": "programs/develop/libraries/proc_lib/proc_lib.obj",
-
         "LIB/SORT.OBJ": "programs/develop/libraries/sorter/sort.obj",
 
+        "MEDIA/KIV": "programs/media/kiv/kiv",
 
         "GAMES/PIPES": "programs/games/pipes/pipes"
         #

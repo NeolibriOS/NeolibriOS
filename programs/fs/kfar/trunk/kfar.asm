@@ -17,7 +17,7 @@ max_height = 255
 
 include '../../../KOSfuncs.inc'
 include '../../../macros.inc'
-include 'lang.inc' ; Language support for locales: ru_RU (CP866), en_US.
+;include 'lang.inc' ; Language support for locales: ru_RU (CP866), en_US.
 include 'font.inc'
 include 'sort.inc'
 include 'kglobals.inc'

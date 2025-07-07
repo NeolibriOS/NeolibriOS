@@ -20,7 +20,7 @@ section '.flat' code readable align 16
 
 ; include auxiliary procedures
 include 'kglobals.inc'		; iglobal/uglobal
-include 'lang.inc'		; define language for localized strings
+;include 'lang.inc'		; define language for localized strings
 include 'crc.inc'		; CRC32 calculation
 include 'sha256.inc'		; SHA-256 hash algorithm
 include 'aes.inc'		; AES crypto algorithm
