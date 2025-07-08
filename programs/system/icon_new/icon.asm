@@ -35,7 +35,7 @@ BegData 	equ fiStdIco.point
 	dd 0		; path
 ;------------------------------------------------------------------------------
 
-include 'lang.inc'      ; Language support for locales: ru_RU (CP866), en_US.
+;include 'lang.inc'      ; Language support for locales: ru_RU (CP866), en_US.
 include '../../macros.inc'
 include '../../proc32.inc'
 include '../../develop/libraries/box_lib/trunk/box_lib.mac'

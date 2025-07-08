@@ -66,6 +66,7 @@ def main():
 
     img_files |= {
         "KERNEL.MNT": "kernel/kernel.mnt",
+        "@ICON": "programs/system/icon_new/icon",
         "@TASKBAR": "programs/system/taskbar/taskbar",
         "DEFAULT2.SKN": "skins/shkvorka/shkvorka.skn",
         "DEFAULT.SKN": "skins/gnome_green/gnome_green.skn",
@@ -82,6 +83,7 @@ def main():
 
         "LIB/ARCHIVER.OBJ": "programs/fs/kfar/trunk/kfar_arc/kfar_arc.obj",
         "LIB/BOX_LIB.OBJ": "programs/develop/libraries/box_lib/trunk/box_lib.obj",
+        "LIB/CNV_PNG.OBJ": "programs/media/zsea/plugins/png/cnv_png.obj",
         "LIB/LIBGFX.OBJ": "programs/develop/libraries/libs-dev/libgfx/libgfx.obj",
         "LIB/LIBIMG.OBJ": "programs/develop/libraries/libs-dev/libimg/libimg.obj",
         "LIB/LIBINI.OBJ": "programs/develop/libraries/libs-dev/libini/libini.obj",

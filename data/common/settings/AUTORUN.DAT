@@ -13,7 +13,7 @@
 # /SYS/GAMES/PIPES        ""   0  # Run something
 /SYS/FS/KFAR            ""   0  # fhjhfjrhfh
 #/SYS/MEDIA/KIV          ""   0  # hjhffhfjfhj
-# /SYS/@ICON              ""   0	# Multithread desktop icons
+/SYS/@ICON              ""   0	# Multithread desktop icons
 # /SYS/TMPDISK            A0   0	# Add virtual RAM disk /tmp0/1
 # /SYS/@RESHARE           ""   0	# Shared resources
 # /SYS/LOADDRV            SDHCI 0	# Start SDHCI driver
