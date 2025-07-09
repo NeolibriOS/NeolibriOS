@@ -70,6 +70,7 @@ def main():
         "@MENU": "programs/system/menu/menu",
         "@RESHARE": "programs/system/reshare/reshare",
         "@TASKBAR": "programs/system/taskbar/taskbar",
+        "CALCPLUS": "programs/other/calcplus/calcplus",
         "DEFAULT2.SKN": "skins/shkvorka/shkvorka.skn",
         "DEFAULT.SKN": "skins/gnome_green/gnome_green.skn",
         "ESKIN": "programs/system/eskin/eskin",
@@ -95,8 +96,8 @@ def main():
 
         "MEDIA/KIV": "programs/media/kiv/kiv",
 
-        "GAMES/PIPES": "programs/games/pipes/pipes"
-        #
+        "GAMES/PIPES": "programs/games/pipes/pipes",
+        "GAMES/TETRIS": "programs/games/tetris/tetris",
     }
 
     # create empty 1.44M file

@@ -10,9 +10,6 @@
 # /SYS/LOADDRV            RDC  0	# videodriver for RDC M2010/M2012
 /SYS/@TASKBAR           ""   0	# Start taskbar
 /SYS/ESKIN              ""   0	# Set style
-# /SYS/GAMES/PIPES        ""   0  # Run something
-/SYS/FS/KFAR            ""   0  # fhjhfjrhfh
-#/SYS/MEDIA/KIV          ""   0  # hjhffhfjfhj
 /SYS/@ICON              ""   0	# Multithread desktop icons
 # /SYS/TMPDISK            A0   0	# Add virtual RAM disk /tmp0/1
 /SYS/@RESHARE           ""   0	# Shared resources
