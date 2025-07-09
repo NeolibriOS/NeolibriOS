@@ -67,6 +67,8 @@ def main():
     img_files |= {
         "KERNEL.MNT": "kernel/kernel.mnt",
         "@ICON": "programs/system/icon_new/icon",
+        "@MENU": "programs/system/menu/menu",
+        "@RESHARE": "programs/system/reshare/reshare",
         "@TASKBAR": "programs/system/taskbar/taskbar",
         "DEFAULT2.SKN": "skins/shkvorka/shkvorka.skn",
         "DEFAULT.SKN": "skins/gnome_green/gnome_green.skn",
