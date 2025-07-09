@@ -74,7 +74,7 @@ start:
     .else
         DEBUGF  DBG_ERR, "@reshare: error, icons32 not found in %s\n", icons32_path
     .endif
-    
+
     invoke  img.from_file, icons16_path
     .if eax <> 0
         mov     [icons16_image], eax
@@ -88,18 +88,20 @@ start:
     .endif
     ; check if this is second instance of app. if so, run gui. else daemon mode
     mcall   SF_THREAD_INFO, thread_info, -1
-    stdcall string.copy, thread_info + 10, thread_name
+    stdcall string.copy, thread_info + process_information.process_name, thread_name
     stdcall string.to_lower_case, thread_name
     xor     edx, edx ; instance count
     xor     esi, esi
     .while esi < 256
         mcall   SF_THREAD_INFO, thread_info, esi
-        stdcall string.to_lower_case, thread_info + 10
-        stdcall string.cmp, thread_info + 10, thread_name, -1
-        .if eax = 0
-            inc     edx
-            cmp     edx, 2
-            jae     start_gui
+        .if [thread_info + process_information.slot_state] <> TSTATE_FREE
+            stdcall string.to_lower_case, thread_info + process_information.process_name
+            stdcall string.cmp, thread_info + process_information.process_name, thread_name, -1
+            .if eax = 0
+                inc     edx
+                cmp     edx, 2
+                jae     start_gui
+            .endif
         .endif
         inc     esi
     .endw
@@ -212,7 +214,7 @@ proc draw_tabs stdcall
     mov     eax, [active_tab]
     and     eax, MASK_ACTIVE_CHECKBOX
     stdcall draw_flat_button, (PAD + BTNW)*3 + TABX, PAD + 30, shared_chbox_name, 10 + MASK_ACTIVE_CHECKBOX, eax
-    
+
     stdcall draw_tab_icons32
     ret
 endp
@@ -239,7 +241,7 @@ endl
         mov     [iconw], 32
         mov     eax, [ebx + Image.Height]
         mov     [iconh], eax
-        
+
     .elseif eax = MASK_ACTIVE_ICONS16
         cmp     [icons16_image], 0
         jz      .exit
@@ -306,7 +308,7 @@ endl
     xor     ebp, ebp
     mcall   SF_PUT_IMAGE_EXT
     pop     ebp
-    
+
     ; WriteText(-strlen(itoa(i))*8+50/2+x, y+RESY+iconw+5, 0x90, sc.line, itoa(i));
     mov     ecx, [esp] ; get saved ecx (counter) from the stack
     xor     esi, esi ; counter
@@ -338,7 +340,7 @@ endl
     add     ebx, [y]
     add     ebx, [iconw]
     add     ebx, RESY + 5
-    
+
     mov     ecx, 0x90 shl 24
     add     ecx, [sc.work_graph]
     lea     edx, [num_str]
@@ -457,7 +459,7 @@ daemon_mode:
     ; .else
     ;     DEBUGF  DBG_ERR, "Daemon mode: no icons16 !\n"
     .endif
-    
+
     mcall   SF_SET_EVENTS_MASK, 10000b ; set event mask EVM_DESKTOPBG
 .event_loop:
     push    [sc.work]
