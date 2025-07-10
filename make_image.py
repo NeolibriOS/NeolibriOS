@@ -71,6 +71,7 @@ def main():
         "@RESHARE": "programs/system/reshare/reshare",
         "@TASKBAR": "programs/system/taskbar/taskbar",
         "CALCPLUS": "programs/other/calcplus/calcplus",
+        "CALENDAR": "programs/system/calendar/calendar",
         "PROCMAN": "programs/system/procman/procman",
         "DEFAULT2.SKN": "skins/shkvorka/shkvorka.skn",
         "DEFAULT.SKN": "skins/gnome_green/gnome_green.skn",
