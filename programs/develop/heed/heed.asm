@@ -59,12 +59,12 @@ use32
 ;--------------------------------------------------------------------
 _title	equ 'HeEd 0.16', 0
 
-include	'lang.inc'      ; Language support for locales: ru_RU (CP866), en_US.
-include '../../../KOSfuncs.inc'
-include '../../../config.inc'		; for nightbuild
-include '../../../macros.inc'
-include	'../../libraries/box_lib/trunk/box_lib.mac'
-include	'../../../load_lib.mac'
+;include	'lang.inc'      ; Language support for locales: ru_RU (CP866), en_US.
+include '../../KOSfuncs.inc'
+include '../../config.inc'		; for nightbuild
+include '../../macros.inc'
+include	'../libraries/box_lib/trunk/box_lib.mac'
+include	'../../load_lib.mac'
 
 @use_library
 ;--------------------------------------------------------------------

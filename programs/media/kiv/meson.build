@@ -1,5 +1,5 @@
 current_target = custom_target('media_kiv',
-  input: ['kiv.asm'],
+  input: ['kiv.asm', 'kivicons.bmp'],
   output: 'kiv',
   command: [
     fasm, '@INPUT0@', '@OUTPUT@', '&&',

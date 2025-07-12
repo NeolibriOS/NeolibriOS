@@ -1,5 +1,5 @@
 current_target = custom_target('reshare',
-  input: ['reshare.asm'],
+  input: ['reshare.asm', 'chbox.inc'],
   output: 'reshare',
   command: [
     fasm, '-m', '16384', '@INPUT0@', '@OUTPUT@', '&&',

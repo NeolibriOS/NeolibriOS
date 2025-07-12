@@ -80,6 +80,8 @@ def main():
         "LOADDRV": "programs/system/loaddrv/loaddrv",
         "SETUP": "programs/system/setup/setup",
         "BOARD": "programs/system/board/board",
+        "DEVELOP/H2D2B": "programs/develop/h2d2b/h2d2b",
+        "DEVELOP/HEED": "programs/develop/heed/heed",
 
         "FS/KFAR": "programs/fs/kfar/trunk/kfar",
         "FS/KFAR.INI": os.path.join(sources_dir, f"data/{args.lang if args.lang != "en_US" else "common"}/File Managers/kfar.ini"),

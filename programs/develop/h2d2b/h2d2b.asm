@@ -17,12 +17,12 @@ use32
     db  'MENUET01'
     dd  1,start,i_end,e_end,e_end,0,sys_path
 
-include '../../../proc32.inc'
-include '../../../macros.inc' ; макросы облегчают жизнь ассемблерщиков!
-include '../../../KOSfuncs.inc'
-include '../../../load_lib.mac'
-include '../../../develop/libraries/box_lib/trunk/box_lib.mac'
-include 'lang.inc'      ; Language support for locales: ru_RU (CP866), en_US.
+include '../../proc32.inc'
+include '../../macros.inc' ; макросы облегчают жизнь ассемблерщиков!
+include '../../KOSfuncs.inc'
+include '../../load_lib.mac'
+include '../../develop/libraries/box_lib/trunk/box_lib.mac'
+;include 'lang.inc'      ; Language support for locales: ru_RU (CP866), en_US.
 
 @use_library
 
