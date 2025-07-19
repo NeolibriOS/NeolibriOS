@@ -35,7 +35,7 @@ program.start:
 		mov    edi, program.params
 		cmp    [edi], dword 0
 		je     terminate
-		
+
         call   FakeDrawWindow
         call   OpenDialogInit
         call   OpenDialogSetFilter
@@ -118,7 +118,7 @@ FakeDrawWindow:
         mcall SF_GET_GRAPHICAL_PARAMS,SSF_SCREEN_SIZE
         shr    eax, 1
         and    eax, 0x7FFF7FFF
-; draw.window        
+; draw.window
         movzx  ecx, ax
         shl    ecx, 16
         shr    eax, 16
@@ -215,7 +215,7 @@ sz_OpenDialog_init  db "OpenDialog_init",0
 sz_OpenDialog_start db "OpenDialog_start",0
 sz_com_area_name    db "FFFFFFFF_open_dialog",0
 sz_dir_default_path db "/sys",0
-sz_start_path       db "/sys/File managers/opendial",0
+sz_start_path       db "/sys/fs/opendial",0
 ; ---------------------------------------------------------------------------- ;
 proclib             dd 0
 opendialog_init     dd 0

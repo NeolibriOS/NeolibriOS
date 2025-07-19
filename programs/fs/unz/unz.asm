@@ -801,7 +801,7 @@ OpenDialog_data:
 communication_area_name:
 	db 'FFFFFFFF_open_dialog',0
 open_dialog_path:
-	db '/sys/File managers/opendial',0
+	db '/sys/fs/opendial',0
 
 communication_area_default_pach:
 	db '/sys',0

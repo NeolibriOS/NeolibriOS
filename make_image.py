@@ -52,7 +52,7 @@ def main():
         "NETWORK/USERS.INI": os.path.join(sources_dir, "data/common/network/users.ini"),
         "SETTINGS/ASSOC.INI": os.path.join(sources_dir, "data/common/settings/assoc.ini"),
         "SETTINGS/AUTORUN.DAT": os.path.join(sources_dir, "data/common/settings/AUTORUN.DAT"),
-        # "SETTINGS/CEDIT.INI": os.path.join(sources_dir, "programs/develop/cedit/CEDIT.INI"),
+        "SETTINGS/CEDIT.INI": os.path.join(sources_dir, "programs/develop/cedit/CEDIT.INI"),
         "SETTINGS/ICON.INI": os.path.join(sources_dir, f"data/{args.lang}/settings/icon.ini"),
         "SETTINGS/KEYMAP.KEY": os.path.join(sources_dir, "programs/system/taskbar/KEYMAP.KEY"),
         "SETTINGS/KOLIBRI.LBL": os.path.join(sources_dir, f"data/{args.lang}/settings/kolibri.lbl"),
@@ -80,11 +80,14 @@ def main():
         "LOADDRV": "programs/system/loaddrv/loaddrv",
         "SETUP": "programs/system/setup/setup",
         "BOARD": "programs/system/board/board",
+        "DEVELOP/CEDIT": "programs/develop/cedit/CEDIT",
         "DEVELOP/H2D2B": "programs/develop/h2d2b/h2d2b",
         "DEVELOP/HEED": "programs/develop/heed/heed",
 
         "FS/KFAR": "programs/fs/kfar/trunk/kfar",
-        "FS/KFAR.INI": os.path.join(sources_dir, f"data/{args.lang if args.lang != "en_US" else "common"}/File Managers/kfar.ini"),
+        "FS/KFAR.INI": os.path.join(sources_dir, f"data/{args.lang if args.lang != "en_US" else "common"}/fs/kfar.ini"),
+        "FS/ICONS.INI": os.path.join(sources_dir, "data/common/fs/icons.ini"),
+        "FS/OPENDIAL": "programs/fs/opendial/opendial",
 
         "DRIVERS/PS2MOUSE.SYS": "drivers/mouse/ps2mouse4d/ps2mouse.sys",
 

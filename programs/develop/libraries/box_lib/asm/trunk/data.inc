@@ -4,7 +4,7 @@
 header_1	db 'Box_lib Control Demo by Mario79',0
 
 ok_btn		db 'Ok',0
-	
+
 labelt3		db 'About program',0
 ;---------------------------------------------------------------------
 start_temp_file_name:	db 'ctrldemo_test',0
@@ -68,10 +68,10 @@ aCP_Assoc	db 'Associations',0
 align	4
 UNPACK_import:
 ;unpack_Version			dd aUnpack_Version
-;unpack_PluginLoad		dd aUnpack_PluginLoad	
+;unpack_PluginLoad		dd aUnpack_PluginLoad
 ;unpack_OpenFilePlugin		dd aUnpack_OpenFilePlugin
 ;unpack_ClosePlugin		dd aUnpack_ClosePlugin
-;unpack_ReadFolder		dd aUnpack_ReadFolder	
+;unpack_ReadFolder		dd aUnpack_ReadFolder
 ;unpack_SetFolder		dd aUnpack_SetFolder
 ;unpack_GetFiles		dd aUnpack_GetFiles
 ;unpack_GetOpenPluginInfo	dd aUnpack_GetOpenPluginInfo
@@ -110,7 +110,7 @@ fileinfo:
 string:
 	db 0
 	dd file_name
-	
+
 plugin	dd 0
 ;---------------------------------------------------------------------
 ; not change this section!!!
@@ -127,7 +127,7 @@ deflate_unpack	dd 0
 
 ;---------------------------------------------------------------------
 align	4
-Box_lib_import:	
+Box_lib_import:
 ;init_lib		dd a_init
 ;version_lib		dd a_version
 
@@ -212,7 +212,7 @@ sz_PathShow_draw	db 'PathShow_draw',0
 
 ;---------------------------------------------------------------------
 
-;---------------------------------------------------------------------	
+;---------------------------------------------------------------------
 align	4
 scroll_bar_data_vertical:
 .x:
@@ -449,8 +449,8 @@ communication_area_name:
 ;	db 'opendial',0
 
 od_path:
-	db '/sys/File Managers/OpenDial',0
-	
+	db '/sys/fs/opendial',0
+
 communication_area_default_pach:
 	db '/sys',0
 

@@ -893,7 +893,7 @@ default_dir db '/sys',0 ;директория по умолчанию
 communication_area_name:
         db 'FFFFFFFF_open_dialog',0
 opendialog_path:
-        db '/sys/File managers/opendial',0
+        db '/sys/fs/opendial',0
 filename_area:
         db 'temp1.grf',0
                 rb 256

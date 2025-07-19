@@ -2524,7 +2524,7 @@ open_dialog_path:
 if __nightbuild eq yes
     db '/sys/MANAGERS/opendial',0
 else
-    db '/sys/File Managers/opendial',0
+    db '/sys/fs/opendial',0
 end if
 communication_area_default_path:
     db '/sys',0

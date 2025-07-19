@@ -97,7 +97,7 @@ start:
 
 	mcall	68,12,8+9*6*38*4	; 8216
 	mov	[text_scren_buffer2],eax
-	
+
 load_libraries l_libs_start,end_l_libs
 
 	cmp	eax,-1
@@ -385,7 +385,7 @@ testGetScreen_GS:
 	mcall	61,2
 	cmp	eax,24
 	je	get_area_with_GS_24
-	
+
 	cmp	eax,16
 	je	get_area_with_GS_16
 ;-----------------------------------------------------------------------------
@@ -635,12 +635,12 @@ DrawBars:
 	;mov	esi,1
 	;add ecx,0x10000000 ;big font
 	;mcall
-	
-	
+
+
 	; draw difference
 	pop ecx
 	add ecx,0x10000000 ;big font
-	
+
 	pusha
 	mov esi,ecx
 	mov eax,[edi+0]
@@ -653,16 +653,16 @@ DrawBars:
 	mov ecx, eax
 	sub ecx,100
 	mov	[sign],'+'
-	cmp ecx,0 
-	jge @f             ; no need to invert positive rumber 
+	cmp ecx,0
+	jge @f             ; no need to invert positive rumber
 	neg ecx
 	mov	[sign],'-'
-	@@:	
+	@@:
 	cmp ecx,1          ; do not show <=1% results
 	jle .difference_end
 	cmp ecx,100        ; do not show >=100% results
 	je .difference_end
-	
+
 	push ecx esi
 	add	ebx,(10*8)*65536
 	mov ecx,esi
@@ -670,14 +670,14 @@ DrawBars:
 	mov	esi,1
 	mcall	4
 	pop esi ecx
-	
+
 	add	ebx,(1*8)*65536
 	mov edx,ebx
 	mcall	47, 10000000000001000000000000000000b
-		
+
   .difference_end:
 	popa
-	
+
 	add	esp,4
 
 	add	edi,TEST_REC_SIZE
@@ -736,7 +736,7 @@ thread_comment:
 	mov	edi, edit1
 	mov	[edi+48], eax	;ed_size
 	mov	[edi+52], eax	;ed_pos
-	
+
 	mov	esi,comment_string_2
 	cld
 @@:
@@ -906,7 +906,7 @@ else if lang eq ru_RU
 	aDrawingPictF73 db 'Картинка для блиттера, 90x123, px',0
 	aGetScreenF36   db 'Чтение экрана из видеопамяти, 90x123, px',0
 	aGetScreen_GS   db 'Чтение экрана из видеокарты, 90x123, px',0
-	aDrawingVLine   db 'Больший катет, 350 px',0
+	aDrawingVLine   db 'Эольший катет, 350 px',0
 	aDrawingHLine   db 'Меньший катет, 270 px',0
 	aDrawingFLine   db 'Гипотенуза, 350 px',0
 	aDrawingText1   db 'Системный текст маленький, 34 знака',0
@@ -917,7 +917,7 @@ else if lang eq ru_RU
 	aDrawingPixel   db 'Одиночный пиксель',0
 
 	aTestText    db 'This is a 34-charachters test text'
-	aButtonsText db 'Тест      Названия    Из файла     В файл     Вправо >',0
+	aButtonsText db 'Тест      Эазвания    Из файла     В файл     Вправо >',0
 	aCaption     db 'Графический бенчмарк для Колибри v0.9',0
 
 	aLeft	db 'Слева:',0
@@ -925,7 +925,7 @@ else if lang eq ru_RU
 
 	aComment1	db 'этот тест',0
 	aComment2	db 'предыдущий тест',0
-	aCommentT	db 'Редактировать комментарии',0
+	aCommentT	db 'Эедактировать комментарии',0
 else
 	aDrawingWindow	db 'Window Of Type #3, 325x400 px',0
 	aDrawingBar	db 'Filled Rectangle, 100x250 px',0
@@ -1009,7 +1009,7 @@ open_dialog_path:
 if __nightbuild eq yes
 	db '/sys/MANAGERS/opendial',0
 else
-	db '/sys/File Managers/opendial',0
+	db '/sys/fs/opendial',0
 end if
 communication_area_default_pach:
 	db '/sys/',0

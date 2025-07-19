@@ -37,7 +37,7 @@ open_dialog_path:
 if __nightbuild eq yes
     db '/sys/MANAGERS/opendial',0
 else
-    db '/sys/File Managers/opendial',0
+    db '/sys/fs/opendial',0
 end if
 communication_area_default_pach:
 	db '/rd0/1/',0
@@ -73,7 +73,7 @@ ColorDialog_data:
 cd_communication_area_name:
 	db 'FFFFFFFF_color_dialog',0
 colordialog_path:
-	db '/sys/colrdial',0 
+	db '/sys/colrdial',0
 
 ;start_temp_file_name:	db 'pattern.mgb',0
 

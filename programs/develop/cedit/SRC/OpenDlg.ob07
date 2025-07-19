@@ -133,7 +133,7 @@ BEGIN
       res.status             := 0;
       res.procinfo           := sys.ADR(res.procinf[0]);
       res.com_area_name      := sys.ADR(res.s_com_area_name[0]);
-      res.start_path         := sys.SADR("/sys/File managers/opendial");
+      res.start_path         := sys.SADR("/sys/fs/opendial");
       res.opendir_path       := sys.ADR(res.s_opendir_path[0]);
       res.dir_default_path   := sys.ADR(res.s_dir_default_path[0]);
       res.openfile_path      := sys.ADR(res.FilePath[0]);

@@ -3,6 +3,7 @@ project('NeolibriOS', 'c', default_options: ['warning_level=everything'])
 lang = get_option('lang')
 
 fasm = find_program('fasm', required: true)
+oberon07 = find_program('oberon07', required: true)
 kpack = find_program('kpack', required: true)
 kpack = [kpack, '--nologo']
 kerpack = find_program('kerpack', required: true)

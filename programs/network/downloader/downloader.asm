@@ -413,7 +413,7 @@ OpenDialog_data:
 .y_start                dw 140  ; Window Y position
 
 communication_area_name         db 'FFFFFFFF_open_dialog',0
-open_dialog_path                db '/sys/File Managers/opendial',0
+open_dialog_path                db '/sys/fs/opendial',0
 communication_area_default_path db '/sys',0
 
 filter:

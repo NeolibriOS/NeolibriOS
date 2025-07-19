@@ -265,7 +265,7 @@ EditBoxSetText_proc   TypeDef Ptr EditBoxSetText_proto
 ; -------------------------------------------------------- ;
 szFFFFFFFFOpenDialog db "FFFFFFFF_open_dialog",0
 szSYS                db "/sys",0
-szOpenDialPath       db "/sys/File managers/opendial",0
+szOpenDialPath       db "/sys/fs/opendial",0
 szEmpty              db 0
 ; -------------------------------------------------------- ;
 .Data; --------------------------------------------------- ;
@@ -316,7 +316,7 @@ Edit1 TEditBox <\
 .Data? ; ------------------------------------------------- ;
 ; -------------------------------------------------------- ;
 Extern AppParams: Byte
-Extern AppPath:   Byte 
+Extern AppPath:   Byte
 
 BoxLib         Dword ?
 ProcLib        Dword ?
@@ -350,7 +350,7 @@ ProcInfoBuffer     Byte PROC_INFO_BUFFER_SIZE Dup (?)
 
 Edit1MouseVariable Dword ?
 Edit1TextBuffer Byte EDIT1_TEXT_BUFFER_SIZE + 2 Dup (?) ; buffer for Edit1.text
-TmpBuffer Byte TMP_BUFFER_SIZE Dup (?) ; this buffer uses in StrInsert 
+TmpBuffer Byte TMP_BUFFER_SIZE Dup (?) ; this buffer uses in StrInsert
 ; -------------------------------------------------------- ;
 .Code ; -------------------------------------------------- ;
 ; -------------------------------------------------------- ;
@@ -580,9 +580,9 @@ OnButtonBrowse Endp
         mov    OpenDialogStart, eax
 
 ; Copy command line parameters to EditBox
-; Assume EDIT1_TEXT_BUFFER_SIZE > PARAMS_SIZE(defined in linker-script)    
-        Invoke EditBoxSetText, Offset Edit1, Offset AppParams                         
-        
+; Assume EDIT1_TEXT_BUFFER_SIZE > PARAMS_SIZE(defined in linker-script)
+        Invoke EditBoxSetText, Offset Edit1, Offset AppParams
+
 ; it need for case if spaces are present in filepath
         lea    eax, [OpenFilePathBuffer + 1]
         mov    OD.openfile_path, eax

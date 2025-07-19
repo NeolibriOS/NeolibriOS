@@ -52,7 +52,7 @@ end if
 
  sys_dir db "/sys", 0
  slash db "/", 0
- open_dialog_path db "/sys/file managers/opendial", 0
+ open_dialog_path db "/sys/fs/opendial", 0
  app_link db "$", 0
  icons db "/sys/icons32.png", 0
  communication_area_name db "FFFFFF_open_dialog", 0

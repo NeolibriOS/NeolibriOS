@@ -60,7 +60,7 @@ use32
   dd     I_END ;APP_MEM
   dd     stacktop ;APP_MEM - 1024
   dd     I_PARAM, cur_dir_path
-  
+
 listsel    dd 0
 channel dd 0
 COLOR_ORDER equ MENUETOS
@@ -147,7 +147,7 @@ clearpath:
 ;OpenDialog_start:
 ;       copy_path       open_dialog_name,path,library_path,0
         mov     [OpenDialog_data.type],0        ; Open
-        or      [flag],FL_LOCK  
+        or      [flag],FL_LOCK
         push    dword OpenDialog_data
         call    [OpenDialog_Start]
         and     [flag],not FL_LOCK
@@ -405,7 +405,7 @@ open_dialog_path:
 if __nightbuild eq yes
     db '/sys/MANAGERS/opendial',0
 else
-    db '/sys/File Managers/opendial',0
+    db '/sys/fs/opendial',0
 end if
 communication_area_default_pach:
         db '/sys',0

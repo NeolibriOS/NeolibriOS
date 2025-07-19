@@ -134,7 +134,7 @@ open_dialog_path:
 if __nightbuild eq yes
     db '/sys/MANAGERS/opendial',0
 else
-    db '/sys/File Managers/opendial',0
+    db '/sys/fs/opendial',0
 end if
 communication_area_default_pach:
 	db '/sys',0
@@ -161,7 +161,7 @@ start_temp_file_name:	db 'temp.bin',0
 
 ;---------------------------------------------------------------------
 align 4
-edit1 edit_box WIN_W-EDIT_X-RIGHT_BTN_W-12, EDIT_X, 3,          0xffffff,\ 
+edit1 edit_box WIN_W-EDIT_X-RIGHT_BTN_W-12, EDIT_X, 3,          0xffffff,\
         0xA4C4E4, 0x80ff, 0, 0x10000000, 256, inname,  mouse_dd, 0, 11,11
 edit2 edit_box WIN_W-EDIT_X-RIGHT_BTN_W-12, EDIT_X, LINE_H+3,   0xffffff,\
         0xA4C4E4, 0x80ff, 0, 0x10000000, 256, outname, mouse_dd, 0, 7,7
