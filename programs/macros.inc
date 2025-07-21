@@ -330,35 +330,7 @@ macro mcall a,b,c,d,e,f,g {   ; [mike.dld], [Ghost]
  end if
 }
 
-
 ; -------------------------
-macro __header a,[b] {
- common
-  use32
-  org 0
-  db 'MENUET',a
- forward
-  if b eq
-   dd 0
-  else
-   dd b
-  end if
-}
-
-macro __section name {
- align 16
- label name
-}
-
-macro __func name {
- if ~used name
-  display 'FUNC NOT USED: ',`name,13,10
- else
-  align 4
-  name:
-  ;diff16 `name,0,name
-}
-
 macro endf { end if }
 
 macro diff16 title,l1,l2
