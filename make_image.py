@@ -83,6 +83,7 @@ def main():
         "DEVELOP/CEDIT": "programs/develop/cedit/CEDIT",
         "DEVELOP/H2D2B": "programs/develop/h2d2b/h2d2b",
         "DEVELOP/HEED": "programs/develop/heed/heed",
+        "DEVELOP/COBJ": "programs/develop/cobj/cobj",
 
         "FS/KFAR": "programs/fs/kfar/trunk/kfar",
         "FS/KFAR.INI": os.path.join(sources_dir, f"data/{args.lang if args.lang != "en_US" else "common"}/fs/kfar.ini"),
@@ -100,6 +101,7 @@ def main():
         "LIB/LIBIO.OBJ": "programs/develop/libraries/libs-dev/libio/libio.obj",
         "LIB/PROC_LIB.OBJ": "programs/develop/libraries/proc_lib/proc_lib.obj",
         "LIB/SORT.OBJ": "programs/develop/libraries/sorter/sort.obj",
+        "LIB/CONSOLE.OBJ": "programs/develop/libraries/console_coff/console.obj",
 
         "MEDIA/KIV": "programs/media/kiv/kiv",
 
