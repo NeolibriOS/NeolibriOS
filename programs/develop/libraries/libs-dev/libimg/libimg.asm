@@ -78,6 +78,10 @@ proc lib_init ;///////////////////////////////////////////////////////////////;;
         mov     [mem.alloc], eax
         mov     [mem.free], ebx
         mov     [mem.realloc], ecx
+
+        cmp     [dll.load], edx
+        je      .ok
+
         mov     [dll.load], edx
 
         or      edx, edx
@@ -1061,7 +1065,7 @@ endl
         shr     ecx, 1
         mov     esi, [ebx + Image.Data]
         lea     edi, [esi + eax]
-    
+
 .next_line_vert:
         push    ecx
 
@@ -1755,7 +1759,7 @@ endl
         jz      @f
         mov     esi, [ebx + Image.Data]
         add     esi, edx
-        jmp     .rotate_ccw1.begin 
+        jmp     .rotate_ccw1.begin
 @@:
         dec     edx
         js      .rotate_ccw1.quit
@@ -1834,7 +1838,7 @@ endl
         jz      @f
         mov     esi, [ebx + Image.Data]
         add     esi, edx
-        jmp     .rotate_ccw2i.begin 
+        jmp     .rotate_ccw2i.begin
 @@:
         dec     edx
         js      .rotate_ccw2i.quit
@@ -1912,7 +1916,7 @@ endl
         jz      @f
         mov     esi, [ebx + Image.Data]
         add     esi, edx
-        jmp     .rotate_ccw4i.begin 
+        jmp     .rotate_ccw4i.begin
 @@:
         dec     edx
         js      .rotate_ccw4i.quit

@@ -100,6 +100,10 @@ lib_init: ;//////////////////////////////////////////////////////////////////;;
         mov     [mem.alloc], eax
         mov     [mem.free], ebx
         mov     [mem.realloc], ecx
+
+        cmp     [dll.load], edx
+        je      .ok
+
         mov     [dll.load], edx
 
         invoke  dll.load, @IMPORT
@@ -114,6 +118,8 @@ lib_init: ;//////////////////////////////////////////////////////////////////;;
         invoke  ini.get_str, inifile, sec_proxy, key_user, proxyUser, 256, proxyUser
         invoke  ini.get_str, inifile, sec_proxy, key_password, proxyPassword, 256, proxyPassword
         popa
+
+  .ok:
 
         DEBUGF  1, "HTTP library: init OK\n"
         xor     eax, eax

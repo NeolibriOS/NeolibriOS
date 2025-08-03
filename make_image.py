@@ -80,6 +80,8 @@ def main():
         "LOADDRV": "programs/system/loaddrv/loaddrv",
         "SETUP": "programs/system/setup/setup",
         "BOARD": "programs/system/board/board",
+        "DLLINC1": "programs/testing/dllinc1/dllinc1",
+
         "DEVELOP/CEDIT": "programs/develop/cedit/CEDIT",
         "DEVELOP/H2D2B": "programs/develop/h2d2b/h2d2b",
         "DEVELOP/HEED": "programs/develop/heed/heed",
@@ -102,6 +104,7 @@ def main():
         "LIB/PROC_LIB.OBJ": "programs/develop/libraries/proc_lib/proc_lib.obj",
         "LIB/SORT.OBJ": "programs/develop/libraries/sorter/sort.obj",
         "LIB/CONSOLE.OBJ": "programs/develop/libraries/console_coff/console.obj",
+        "LIB/HTTP.OBJ": "programs/develop/libraries/http/http.obj",
 
         "MEDIA/KIV": "programs/media/kiv/kiv",
 

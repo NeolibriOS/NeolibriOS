@@ -37,6 +37,10 @@ proc libini._.init ;////////////////////////////////////////////////////////////
 	mov	[mem.alloc], eax
 	mov	[mem.free], ebx
 	mov	[mem.realloc], ecx
+
+        cmp     [dll.load], edx
+        je      .ok
+
 	mov	[dll.load], edx
 
 	invoke	dll.load, @IMPORT
@@ -47,7 +51,8 @@ proc libini._.init ;////////////////////////////////////////////////////////////
 	inc	eax
 	ret
 
-  .ok:	xor	eax,eax
+  .ok:
+        xor	eax,eax
 	ret
 endp
 
