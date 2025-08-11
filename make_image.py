@@ -80,7 +80,7 @@ def main():
         "LOADDRV": "programs/system/loaddrv/loaddrv",
         "SETUP": "programs/system/setup/setup",
         "BOARD": "programs/system/board/board",
-        "DLLINC1": "programs/testing/dllinc1/dllinc1",
+        "NASH": "programs/system/nash/NASH",
 
         "DEVELOP/CEDIT": "programs/develop/cedit/CEDIT",
         "DEVELOP/H2D2B": "programs/develop/h2d2b/h2d2b",
