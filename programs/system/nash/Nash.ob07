@@ -20,12 +20,19 @@
 MODULE Nash;
 
 IMPORT
-	Out, In, Console, ConsoleLib;
+	SYSTEM, Out, In, Console, ConsoleLib;
 
+    CONST con_title = "NASH v0.1";
+
+(*  TODO make own module with all of the functionality of console + consolelib + more *)
+PROCEDURE con_set_title(title: ARRAY OF CHAR);
+BEGIN
+    ConsoleLib.set_title(SYSTEM.ADR(title[0]));
+END con_set_title;
 
 PROCEDURE main;
 BEGIN
-    ConsoleLib.set_title("fghhdgfdgfdfhgfhdgh");
+    con_set_title(con_title);
 	Out.String("Hello, world!"); Out.Ln;
 	Console.SetColor(Console.White, Console.Red);
 	Out.String("Hello, world!!"); Out.Ln;
