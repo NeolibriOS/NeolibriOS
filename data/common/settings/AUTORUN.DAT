@@ -21,5 +21,5 @@
 # /SYS/@VOLUME            ""   0	# Start volume daemon
 # /SYS/SEARCHAP           ""   0	# Search and mount additional system directory
 # /SYS/@HA                ""   0	# Start Hot Angles
-/SYS/NASH              "" 0	# fjdhfjd
+/SYS/NSH              "" 0	# fjdhfjd
 ### Hello, ASM World! ###

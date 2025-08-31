@@ -80,7 +80,7 @@ def main():
         "LOADDRV": "programs/system/loaddrv/loaddrv",
         "SETUP": "programs/system/setup/setup",
         "BOARD": "programs/system/board/board",
-        "NASH": "programs/system/nash/NASH",
+        "NSH": "programs/system/nsh/nsh",
 
         "DEVELOP/CEDIT": "programs/develop/cedit/CEDIT",
         "DEVELOP/H2D2B": "programs/develop/h2d2b/h2d2b",
@@ -105,12 +105,15 @@ def main():
         "LIB/SORT.OBJ": "programs/develop/libraries/sorter/sort.obj",
         "LIB/CONSOLE.OBJ": "programs/develop/libraries/console_coff/console.obj",
         "LIB/HTTP.OBJ": "programs/develop/libraries/http/http.obj",
+        "LIB/DLL.OBJ": "programs/develop/libraries/dll/dll.obj",
+        "LIB/LIBC.OBJ": "programs/develop/ktcc/libc.obj/source/libc.obj",
 
         "MEDIA/KIV": "programs/media/kiv/kiv",
 
         "GAMES/PIPES": "programs/games/pipes/pipes",
         "GAMES/TETRIS": "programs/games/tetris/tetris",
     }
+    # TODO add NETWORK.OBJ lib
 
     # create empty 1.44M file
     run_cmd_pretty(f"dd status=none if=/dev/zero of={image_name} count=2880 bs=512")

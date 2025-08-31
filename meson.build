@@ -9,6 +9,10 @@ kpack = [kpack, '--nologo']
 kerpack = find_program('kerpack', required: true)
 python3 = find_program('python3', required: true)
 pestrip = find_program('data/common/pestrip.asm', required: true)
+kos32_tcc = find_program('programs/develop/ktcc/bin/kos32-tcc', required: true)
+as = find_program('as', required: true)
+strip = find_program('strip', required: true)
+objconv = find_program('objconv', required: true)
 
 # Get all directories containing meson.build files and include them as subdir():
 
