@@ -13,6 +13,8 @@ kos32_tcc = find_program('programs/develop/ktcc/bin/kos32-tcc', required: true)
 as = find_program('as', required: true)
 strip = find_program('strip', required: true)
 objconv = find_program('objconv', required: true)
+gcc = find_program('gcc', required: true)
+objcopy = find_program('objcopy', required: true)
 
 # Get all directories containing meson.build files and include them as subdir():
 
